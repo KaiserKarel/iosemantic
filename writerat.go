@@ -24,7 +24,7 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
-var DefaultWriterAtOpts = WriterAtOpts{
+var defaultWriterAtOpts = WriterAtOpts{
 	BufferSize: 4096,
 }
 
@@ -36,7 +36,7 @@ var DefaultWriterAtOpts = WriterAtOpts{
 //
 // Use ImplementsWriterAtOpts for more control over the test suite.
 func ImplementsWriterAt(t *testing.T, writer io.WriterAt, length int64) bool {
-	return ImplementsWriterAtOpts(t, writer, length, DefaultWriterAtOpts)
+	return ImplementsWriterAtOpts(t, writer, length, defaultWriterAtOpts)
 }
 
 // WriterAtOpts defines fine tunes controls for the ImplementsWriterAtOpts test.

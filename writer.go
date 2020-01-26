@@ -23,7 +23,7 @@ import (
 )
 
 // DefaultWriterOpts are the options used by ImplementsWriter.
-var DefaultWriterOpts = WriterOpts{
+var defaultWriterOpts = WriterOpts{
 	BufferSize: 4096 * 100,
 }
 
@@ -34,7 +34,7 @@ var DefaultWriterOpts = WriterOpts{
 //
 // Use ImplementsWriterOpts for more control over the test suite.
 func ImplementsWriter(t *testing.T, writer io.Writer) bool {
-	return ImplementsWriterOpts(t, writer, DefaultWriterOpts)
+	return ImplementsWriterOpts(t, writer, defaultWriterOpts)
 }
 
 // WriterOpts defines fine tunes controls for the ImplementsWriterOpts test.

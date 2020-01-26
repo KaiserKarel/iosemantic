@@ -24,7 +24,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var DefaultReaderFromOpts = ReaderFromOpts{BufferSize: 4096 * 100}
+var defaultReaderFromOpts = ReaderFromOpts{BufferSize: 4096 * 100}
 
 // ImplementsReaderFrom verifies the following properties for a reader:
 //
@@ -33,7 +33,7 @@ var DefaultReaderFromOpts = ReaderFromOpts{BufferSize: 4096 * 100}
 //
 // Use ImplementsReaderFromOpts for more control over the test suite.
 func ImplementsReaderFrom(t *testing.T, reader io.ReaderFrom) bool {
-	return ImplementsReaderFromOpts(t, reader, DefaultReaderFromOpts)
+	return ImplementsReaderFromOpts(t, reader, defaultReaderFromOpts)
 }
 
 // ReaderFromOpts defines fine tunes controls for the ImplementsReaderFromOpts test.

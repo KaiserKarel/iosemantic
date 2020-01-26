@@ -23,7 +23,7 @@ import (
 )
 
 // DefaultReaderOpts are the options used by ImplementsReader.
-var DefaultReaderOpts = ReaderOpts{
+var defaultReaderOpts = ReaderOpts{
 	BufferSize: 4096,
 }
 
@@ -36,7 +36,7 @@ var DefaultReaderOpts = ReaderOpts{
 //
 // Use ImplementsReaderOpts for more control over the test suite.
 func ImplementsReader(t *testing.T, reader io.Reader) bool {
-	return ImplementsReaderOpts(t, reader, DefaultReaderOpts)
+	return ImplementsReaderOpts(t, reader, defaultReaderOpts)
 }
 
 // ReaderOpts defines fine tunes controls for the ImplementsReaderOpts test.

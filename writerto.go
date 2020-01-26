@@ -23,7 +23,7 @@ import (
 	"testing/iotest"
 )
 
-var DefaultWriterToOpts = WriterToOpts{
+var defaultWriterToOpts = WriterToOpts{
 	BufferSize: 4096,
 }
 
@@ -34,7 +34,7 @@ var DefaultWriterToOpts = WriterToOpts{
 //
 // Use ImplementsWriterToOpts for more control over the test suite.
 func ImplementsWriterTo(t *testing.T, writer io.WriterTo) bool {
-	return ImplementsWriterToOpts(t, writer, DefaultWriterToOpts)
+	return ImplementsWriterToOpts(t, writer, defaultWriterToOpts)
 }
 
 // WriterToOpts defines fine tunes controls for the ImplementsWriterToOpts test.

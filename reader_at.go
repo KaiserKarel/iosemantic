@@ -25,7 +25,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var DefaultReaderAtOpts = ReaderAtOpts{
+var defaultReaderAtOpts = ReaderAtOpts{
 	BufferSize: 4096,
 }
 
@@ -39,7 +39,7 @@ var DefaultReaderAtOpts = ReaderAtOpts{
 // ImplementsReaderAt is a more strict version of ImplementsReader, just like the semantics of io.Reader and io.ReaderAt.
 // Use ImplementsReaderAtOpts for more control over the test suite.
 func ImplementsReaderAt(t *testing.T, reader io.ReaderAt, length int64) bool {
-	return ImplementsReaderAtOpts(t, reader, length, DefaultReaderAtOpts)
+	return ImplementsReaderAtOpts(t, reader, length, defaultReaderAtOpts)
 }
 
 // ReaderAtOpts defines fine tunes controls for the ImplementsReaderAtOpts test.
