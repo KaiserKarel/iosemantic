@@ -2,7 +2,7 @@
 
 A testing library containing helper function to verify that io.Readers and io.Writers implement their respective specifications.
 
-An example usage is [DRFS](https://github.com/kaiserkarel/drfs), where I implemented a file abstraction and use this library to ensure behavioral correctness.
+An example usage is [DRFS](https://github.com/kaiserkarel/drfs), where I implemented a file abstraction and use this library to ensure git remote add origin git@github.com:KaiserKarel/iosemantic.git correctness.
 
 ## Example
 

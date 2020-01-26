@@ -36,7 +36,7 @@ func ImplementsWriterToOpts(t *testing.T, writer io.WriterTo, opts WriterToOpts)
 
 	n, err = writer.WriteTo(src)
 	return assert.NoError(t, err) &&
-		assert.GreaterOrEqual(t, opts.BufferSize, n)
+		assert.NotZero(t, opts.BufferSize, int(n), "expected at least a write gte zero, but actually wrote: %d", n)
 }
 
 // TimeOutWriter resembles iotest.TimeoutReader.

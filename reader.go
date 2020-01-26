@@ -42,7 +42,9 @@ func ImplementsReaderOpts(t *testing.T, reader io.Reader, opts ReaderOpts) bool 
 		var a int
 		a, err = reader.Read(buf)
 		n += a
-		if !(assert.GreaterOrEqual(t, a, 0) && assert.LessOrEqual(t, opts.BufferSize, n)) {
+		if !(
+			assert.GreaterOrEqual(t, a, 0) &&
+			assert.LessOrEqual(t, opts.BufferSize, n)) {
 			return false
 		}
 
